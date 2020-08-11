@@ -33,7 +33,8 @@ class SignUp extends Component {
           SignUpForm: { ...SignUpForm, confirmPassword: e.target.value },
         });
         break;
-        default:return
+      default:
+        return;
     }
   };
   handleSubmit = (e) => {
@@ -45,8 +46,14 @@ class SignUp extends Component {
       SignUpForm: { email, password, confirmPassword },
     } = this.state;
     return (
-      <form onSubmit={this.handleSubmit} className="w-25 m-auto" noValidate>
-        <div className="form-group">
+      <>
+      <h3 className='d-flex justify-content-center pt-3'>Sign Up</h3>
+      <form
+        onSubmit={this.handleSubmit}
+        className=" d-flex flex-column jumbotron justify-content-center align-items-center"
+        noValidate
+      >
+        <div className="form-group w-50">
           <label htmlFor="email">Email</label>
           <input
             type="email"
@@ -57,7 +64,7 @@ class SignUp extends Component {
             onChange={this.handleChange}
           />
         </div>
-        <div className="form-group">
+        <div className="form-group w-50">
           <label htmlFor="Password">Password</label>
           <input
             type="password"
@@ -68,7 +75,7 @@ class SignUp extends Component {
             onChange={this.handleChange}
           />
         </div>
-        <div className="form-group">
+        <div className="form-group w-50">
           <label htmlFor="confirmPassword">Password</label>
           <input
             type="password"
@@ -83,6 +90,7 @@ class SignUp extends Component {
           Submit
         </button>
       </form>
+      </>
     );
   }
 }

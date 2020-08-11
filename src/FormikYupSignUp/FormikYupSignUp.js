@@ -14,7 +14,7 @@ const FormikYupSignUp = () => {
       {(props) => {
         const { handleSubmit } = props;
         return (
-          <form className="m-auto w-50 " onSubmit={handleSubmit}>
+          <form className="m-auto w-50" onSubmit={handleSubmit}>
             <label className="mx-2 font-weight-bold">Email</label>
             <input
               id="email"
