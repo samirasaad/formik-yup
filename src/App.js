@@ -1,6 +1,6 @@
 import React from "react";
 import FormikYupSignUp from "./FormikYupSignUp/FormikYupSignUp";
-import "./App.css";
+import "./App.scss";
 import SignUp from "./SignUp/SignUp";
 function App() {
   return (

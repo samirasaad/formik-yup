@@ -46,14 +46,14 @@ class SignUp extends Component {
       SignUpForm: { email, password, confirmPassword },
     } = this.state;
     return (
-      <>
+      <div className='w-50 m-auto'>
       <h3 className='d-flex justify-content-center pt-3'>Sign Up</h3>
       <form
         onSubmit={this.handleSubmit}
         className=" d-flex flex-column jumbotron justify-content-center align-items-center"
         noValidate
       >
-        <div className="form-group w-50">
+        <div className="form-group ">
           <label htmlFor="email">Email</label>
           <input
             type="email"
@@ -64,7 +64,7 @@ class SignUp extends Component {
             onChange={this.handleChange}
           />
         </div>
-        <div className="form-group w-50">
+        <div className="form-group ">
           <label htmlFor="Password">Password</label>
           <input
             type="password"
@@ -75,7 +75,7 @@ class SignUp extends Component {
             onChange={this.handleChange}
           />
         </div>
-        <div className="form-group w-50">
+        <div className="form-group ">
           <label htmlFor="confirmPassword">Password</label>
           <input
             type="password"
@@ -90,7 +90,7 @@ class SignUp extends Component {
           Submit
         </button>
       </form>
-      </>
+      </div>
     );
   }
 }
