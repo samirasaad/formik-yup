@@ -4,9 +4,9 @@ class SignUp extends Component {
     super();
     this.state = {
       SignUpForm: {
+        userName: "",
         email: "",
         password: "",
-        confirmPassword: "",
       },
       errors: {
         emailHasRequiredErr: false,
@@ -28,9 +28,9 @@ class SignUp extends Component {
           SignUpForm: { ...SignUpForm, password: e.target.value },
         });
         break;
-      case "confirmPassword":
+      case "userName":
         this.setState({
-          SignUpForm: { ...SignUpForm, confirmPassword: e.target.value },
+          SignUpForm: { ...SignUpForm, userName: e.target.value },
         });
         break;
       default:
@@ -43,7 +43,7 @@ class SignUp extends Component {
   };
   render() {
     const {
-      SignUpForm: { email, password, confirmPassword },
+      SignUpForm: { userName, email, password },
     } = this.state;
     return (
       <div className='w-50 m-auto'>
@@ -53,6 +53,16 @@ class SignUp extends Component {
         className=" d-flex flex-column jumbotron justify-content-center align-items-center"
         noValidate
       >
+         <div className="form-group ">
+          <label htmlFor="confirmPassword">User name</label>
+          <input
+            type="text"
+            id="userName"
+            className="form-control"
+            value={userName}
+            onChange={this.handleChange}
+          />
+        </div>
         <div className="form-group ">
           <label htmlFor="email">Email</label>
           <input
@@ -73,18 +83,8 @@ class SignUp extends Component {
             onChange={this.handleChange}
           />
         </div>
-        <div className="form-group ">
-          <label htmlFor="confirmPassword">confirm password</label>
-          <input
-            type="password"
-            id="confirmPassword"
-            className="form-control"
-            value={confirmPassword}
-            onChange={this.handleChange}
-          />
-        </div>
         <button type="submit" className="btn btn-primary">
-          Submit
+          Sign Up
         </button>
       </form>
       </div>
