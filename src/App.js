@@ -1,12 +1,12 @@
 import React from "react";
+import SignUp from "./SignUp/SignUp";
 import FormikYupSignUp from "./FormikYupSignUp/FormikYupSignUp";
 import "./App.scss";
-import SignUp from "./SignUp/SignUp";
 function App() {
   return (
     <>
-      <SignUp />
-      {/* <FormikYupSignUp /> */}
+      {/* <SignUp /> */}
+      <FormikYupSignUp />
     </>
   );
 }

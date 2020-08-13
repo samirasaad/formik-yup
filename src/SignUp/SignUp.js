@@ -58,7 +58,6 @@ class SignUp extends Component {
           <input
             type="email"
             id="email"
-            placeholder="Enter your email"
             className="form-control"
             value={email}
             onChange={this.handleChange}
@@ -69,18 +68,16 @@ class SignUp extends Component {
           <input
             type="password"
             id="password"
-            placeholder="Enter your password"
             className="form-control"
             value={password}
             onChange={this.handleChange}
           />
         </div>
         <div className="form-group ">
-          <label htmlFor="confirmPassword">Password</label>
+          <label htmlFor="confirmPassword">confirm password</label>
           <input
             type="password"
             id="confirmPassword"
-            placeholder="Confirm your password"
             className="form-control"
             value={confirmPassword}
             onChange={this.handleChange}
