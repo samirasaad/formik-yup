@@ -55,7 +55,7 @@ const FormikYupSignUp = () => {
               <small className="text-danger">{errors.password}</small>
             )}
           </div>
-          <button type="submit" className="btn btn-primary">
+          <button type="submit" className="btn btn-primary mt-4">
             Sign Up
           </button>
         </form>
@@ -71,7 +71,7 @@ const FormikYupSignUp = () => {
         email: Yup.string().email().required("Required"),
         password: Yup.string()
           .min(8, "password should be at least 8 charcters")
-          .required("Required"),
+          .required(  ),
       })}
     >
       {(props) => renderSignUpForm(props)}
