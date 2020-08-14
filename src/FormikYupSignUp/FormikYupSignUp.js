@@ -1,12 +1,12 @@
 import React from "react";
 import { Formik } from "formik";
 const FormikYupSignUp = () => {
-  // const handleChange = () => console.log("e");
   const handleSubmit = (values) => {
     console.log(values);
   };
   const renderSignUpForm = (props) => {
-    const { handleChange, handleSubmit , values} = props;
+    console.log(props);
+    const { handleChange, handleSubmit, values } = props;
     return (
       <div className="w-50 m-auto">
         <h3 className="d-flex justify-content-center pt-3">Sign Up</h3>
@@ -31,7 +31,7 @@ const FormikYupSignUp = () => {
               type="email"
               id="email"
               className="form-control"
-              value={props.values.email}
+              value={values.email}
               onChange={handleChange}
             />
           </div>
