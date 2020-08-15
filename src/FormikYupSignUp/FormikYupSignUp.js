@@ -71,7 +71,7 @@ const FormikYupSignUp = () => {
         email: Yup.string().email().required("Required"),
         password: Yup.string()
           .min(8, "password should be at least 8 charcters")
-          .required(  ),
+          .required("Required"),
       })}
     >
       {(props) => renderSignUpForm(props)}
